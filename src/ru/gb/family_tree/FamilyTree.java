@@ -19,6 +19,9 @@ public class FamilyTree {
     public Human remove(int index){
         return _tree.remove(index);
     }
+    public Human getFirst(){
+        return _tree.getFirst();
+    }
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
@@ -32,13 +35,14 @@ public class FamilyTree {
         for (int i = 0; i < count; i++) {
             Human child1 = new Human(Integer.toString(_tree.size()), LocalDate.now(),
              mother, father);
-             _tree.add(child1);
-             Human child2 = new Human(Integer.toString(_tree.size()), LocalDate.now(),
+            _tree.add(child1);
+            Human child2 = new Human(Integer.toString(_tree.size()), LocalDate.now(),
               mother, father);
-             _tree.add(child2);
+            _tree.add(child2);
+            GenerateChildren(count-2, child1, child2);
         }
     }
-    public void Genarate(int count){
+    public void Generate(int count){
         for (int i = 0; i < count; i++) {
             Human human = new Human(Integer.toString(_tree.size()), LocalDate.MIN);
             _tree.add(human);

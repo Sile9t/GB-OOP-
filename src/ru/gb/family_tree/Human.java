@@ -26,9 +26,9 @@ public class Human {
         _birthDate = birthDate;
         _gender = Count % 2 == 0? Gender.Male : Gender.Female;
         _mother = mother;
-        _mother._children.add(this);
+        if (_mother != null) _mother._children.add(this);
         _father = father;
-        _father._children.add(this);
+        if (_father != null) _father._children.add(this);
         _children = children == null? (new ArrayList<Human>()) : children;
     }
     
@@ -75,15 +75,16 @@ public class Human {
     }
     @Override
     public String toString(){
-        return String.format("%d %s %s born: %t mother: %s father: %s", id, _name,
-         _gender, _birthDate, _mother._name, _father._name);
+        return String.format("%d %s %s born: %s mother: %s father: %s", id, _name,
+         _gender, _birthDate, _mother != null? _mother._name : "none", 
+         _father != null? _father._name : "none");
     }
     public String FamilyTree(){
         return FamilyTree(0);
     }
     public String FamilyTree(int tabsCount){
         StringBuilder sb = new StringBuilder();
-        sb.append(this.toString());
+        sb.append(this.toString() + "\n");
         String tabs = "\t".repeat(tabsCount);
         tabsCount++;
         for(var child : _children)
