@@ -1,4 +1,3 @@
-import java.time.Duration;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
@@ -17,6 +16,9 @@ public class Human {
     public Human(String name, LocalDate birthDate) {
         this(name, birthDate, null, null, null);
     }
+    public Human(String name, LocalDate birthDate, Human mother, Human father) {
+        this(name, birthDate, mother, father, null);
+    }
     public Human(String name, LocalDate birthDate, Human mother,
      Human father, ArrayList<Human> children) {
         id = Count++;
@@ -24,7 +26,9 @@ public class Human {
         _birthDate = birthDate;
         _gender = Count % 2 == 0? Gender.Male : Gender.Female;
         _mother = mother;
+        _mother._children.add(this);
         _father = father;
+        _father._children.add(this);
         _children = children == null? (new ArrayList<Human>()) : children;
     }
     
