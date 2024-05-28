@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VendingMachine {
+    @SuppressWarnings("unused")
     private int id;
     private int productId;
     private List<Product> productList;

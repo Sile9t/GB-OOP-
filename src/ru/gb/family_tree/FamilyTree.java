@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class FamilyTree {
+public class FamilyTree implements Serializable {
     private ArrayList<Human> _tree;
     public FamilyTree() {
         this(new ArrayList<Human>());
@@ -50,5 +51,11 @@ public class FamilyTree {
         for (int i = 0; i < count; i++){
             GenerateChildren(6, _tree.get(i), _tree.get(++i));
         }
+    }
+    public void WriteTo(String path){
+        new FamilyTreeSerializer().Write(path, this);
+    }
+    public void ReadFrom(String path){
+        _tree = new FamilyTreeSerializer().Read(path)._tree;
     }
 }
