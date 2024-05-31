@@ -19,4 +19,7 @@ public class Service {
         }
         return sb.toString();
     }
+    public void sortByName(){
+        group.sortByName();
+    }
 }
