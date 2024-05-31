@@ -1,4 +1,3 @@
-import familyTree.FamilyTree;
 import services.Service;
 
 public class Main {
