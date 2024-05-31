@@ -5,7 +5,7 @@ import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Human implements Serializable{
+public class Human implements Serializable, Comparable<Human>{
     private long id;
     private String name;
     private LocalDate birthDate;
@@ -91,5 +91,9 @@ public class Human implements Serializable{
         for(var child : children)
             sb.append(tabs + child.FamilyTree(tabsCount));
         return sb.toString();
+    }
+    @Override
+    public int compareTo(Human o) {
+        return birthDate.compareTo(o.getBirthDate());
     }
 }

@@ -22,4 +22,7 @@ public class Service {
             sb.append(human + "\n");
         return sb.toString();
     }
+    public void sortByBirthDate(){
+        tree.sort();
+    }
 }

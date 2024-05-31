@@ -10,5 +10,7 @@ public class Main {
         service.addHuman("Merry");
 
         System.out.println(service.getFamilyTree());
+        service.sortByBirthDate();
+        System.out.println(service.getFamilyTree());
     }
 }
