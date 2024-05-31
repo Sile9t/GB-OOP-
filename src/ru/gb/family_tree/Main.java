@@ -1,14 +1,15 @@
 import familyTree.FamilyTree;
+import services.Service;
 
 public class Main {
     public static void main(String[] args) {
-        FamilyTree ft = new FamilyTree();
+        Service service = new Service();
 
-        // Human human = ft.getFirst();
-        // System.out.println(human.FamilyTree());
-        System.out.println(ft);
-        ft.WriteTo("File");
-        ft.ReadFrom("File");
-        System.out.println(ft);
+        service.addHuman("Henry");
+        service.addHuman("Anna");
+        service.addHuman("Etan");
+        service.addHuman("Merry");
+
+        System.out.println(service.getFamilyTree());
     }
 }
