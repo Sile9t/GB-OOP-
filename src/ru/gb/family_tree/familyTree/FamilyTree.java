@@ -2,10 +2,11 @@ package familyTree;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import human.Human;
 
-public class FamilyTree implements Serializable {
+public class FamilyTree implements Serializable, Iterable<Human> {
     private ArrayList<Human> _tree;
     public FamilyTree() {
         this(new ArrayList<Human>());
@@ -60,5 +61,9 @@ public class FamilyTree implements Serializable {
     }
     public void ReadFrom(String path){
         _tree = new FamilyTreeSerializer().Read(path)._tree;
+    }
+    @Override
+    public Iterator<Human> iterator() {
+        return null;
     }
 }
