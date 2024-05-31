@@ -10,5 +10,9 @@ public class Main {
         service.addStudent("Maxim", 21);
 
         System.out.println(service.getStudentListInfo());
+        service.sortByName();
+        System.out.println(service.getStudentListInfo());
+        service.sortByAge();
+        System.out.println(service.getStudentListInfo());
     }
 }

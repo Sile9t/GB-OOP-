@@ -22,4 +22,7 @@ public class Service {
     public void sortByName(){
         group.sortByName();
     }
+    public void sortByAge(){
+        group.sortByAge();
+    }
 }
