@@ -18,6 +18,8 @@ public class Group implements Iterable<Student>{
     }
     public void sortByAge(){
         students.sort(new StudentComparator());
+        // students.sort((o1, o2) -> o1.getAge() - o2.getAge());
+        // students.sort(Comparator.comparingInt(Student::getAge));
     }
     @Override
     public Iterator<Student> iterator() {
