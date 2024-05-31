@@ -7,4 +7,8 @@ public class Service {
         group = new Group();
         builder = new StudentBuilder();
     }
+    public void addStudent(String name, int age){
+        var student = builder.build(name, age);
+        group.addStudent(student);
+    }
 }
