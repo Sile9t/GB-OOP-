@@ -11,4 +11,12 @@ public class Service {
         var student = builder.build(name, age);
         group.addStudent(student);
     }
+    public String getStudentListInfo(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("Students list:\n");
+        for(Student student : group){
+            sb.append(student + "\n");
+        }
+        return sb.toString();
+    }
 }

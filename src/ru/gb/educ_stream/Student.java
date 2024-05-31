@@ -9,4 +9,8 @@ public class Student {
         this.name = name;
         this.age = age;
     }
+    @Override
+    public String toString(){
+        return String.format("%d. %s, %d years old", id, name, age);
+    }
 }
