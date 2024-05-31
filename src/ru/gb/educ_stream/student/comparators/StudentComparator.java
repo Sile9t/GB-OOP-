@@ -1,6 +1,8 @@
-package ru.gb.educ_stream;
+package ru.gb.educ_stream.student.comparators;
 
 import java.util.Comparator;
+
+import ru.gb.educ_stream.student.Student;
 
 public class StudentComparator implements Comparator<Student>{
 

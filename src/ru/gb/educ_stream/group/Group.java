@@ -1,9 +1,12 @@
-package ru.gb.educ_stream;
+package ru.gb.educ_stream.group;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+
+import ru.gb.educ_stream.student.Student;
+import ru.gb.educ_stream.student.comparators.StudentComparator;
 
 public class Group implements Iterable<Student>{
     public List<Student> students;

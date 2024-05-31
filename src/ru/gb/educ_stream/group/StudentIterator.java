@@ -1,9 +1,11 @@
-package ru.gb.educ_stream;
+package ru.gb.educ_stream.group;
 
 import java.util.Iterator;
 import java.util.List;
 
-class StudentIterator implements Iterator<Student>{
+import ru.gb.educ_stream.student.Student;
+
+public class StudentIterator implements Iterator<Student>{
     private int index;
     private List<Student> list;
 

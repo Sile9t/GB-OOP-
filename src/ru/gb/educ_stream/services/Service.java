@@ -1,4 +1,8 @@
-package ru.gb.educ_stream;
+package ru.gb.educ_stream.services;
+
+import ru.gb.educ_stream.builders.StudentBuilder;
+import ru.gb.educ_stream.group.Group;
+import ru.gb.educ_stream.student.Student;
 
 public class Service {
     private Group group;

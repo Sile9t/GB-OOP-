@@ -1,5 +1,7 @@
 package ru.gb.educ_stream;
 
+import ru.gb.educ_stream.services.Service;
+
 public class Main {
     public static void main(String[] args) {
         Service service = new Service();

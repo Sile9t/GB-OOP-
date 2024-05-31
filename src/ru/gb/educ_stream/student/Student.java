@@ -1,4 +1,4 @@
-package ru.gb.educ_stream;
+package ru.gb.educ_stream.student;
 
 public class Student implements Comparable<Student>{
     public long id;
