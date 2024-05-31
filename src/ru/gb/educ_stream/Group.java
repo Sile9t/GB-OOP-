@@ -17,7 +17,7 @@ public class Group implements Iterable<Student>{
         Collections.sort(students);
     }
     public void sortByAge(){
-        Collections.sort(students, new StudentComparator());
+        students.sort(new StudentComparator());
     }
     @Override
     public Iterator<Student> iterator() {
