@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Iterator;
 
 import human.Human;
+import human.comparators.HumanNameComparator;
 
 public class FamilyTree implements Serializable, Iterable<Human> {
     private ArrayList<Human> tree;
@@ -48,5 +49,8 @@ public class FamilyTree implements Serializable, Iterable<Human> {
     }
     public void sort() {
         Collections.sort(tree);
+    }
+    public void sortByName(){
+        tree.sort(new HumanNameComparator());
     }
 }

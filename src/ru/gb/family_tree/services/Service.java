@@ -25,4 +25,7 @@ public class Service {
     public void sortByBirthDate(){
         tree.sort();
     }
+    public void sortByName(){
+        tree.sortByName();
+    }
 }

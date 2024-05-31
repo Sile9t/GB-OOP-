@@ -12,5 +12,8 @@ public class Main {
         System.out.println(service.getFamilyTree());
         service.sortByBirthDate();
         System.out.println(service.getFamilyTree());
+        service.sortByName();
+        System.out.println(service.getFamilyTree());
+
     }
 }
