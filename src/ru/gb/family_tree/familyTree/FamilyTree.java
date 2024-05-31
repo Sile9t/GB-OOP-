@@ -1,6 +1,9 @@
+package familyTree;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
+
+import human.Human;
 
 public class FamilyTree implements Serializable {
     private ArrayList<Human> _tree;
