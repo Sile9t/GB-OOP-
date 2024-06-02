@@ -5,10 +5,10 @@ import ru.gb.educ_stream.group.Group;
 import ru.gb.educ_stream.student.Student;
 
 public class Service {
-    private Group group;
+    private Group<Student> group;
     private StudentBuilder builder;
     public Service() {
-        group = new Group();
+        group = new Group<>();
         builder = new StudentBuilder();
     }
     public void addStudent(String name, int age){

@@ -1,6 +1,8 @@
 package ru.gb.educ_stream.student;
 
-public class Student implements Comparable<Student>{
+import ru.gb.educ_stream.group.GroupItem;
+
+public class Student implements GroupItem<Student>{
     public long id;
     private  String name;
     private int age;
@@ -9,9 +11,11 @@ public class Student implements Comparable<Student>{
         this.name = name;
         this.age = age;
     }
+    @Override
     public String getName(){
         return name;
     }
+    @Override
     public int getAge(){
         return age;
     }

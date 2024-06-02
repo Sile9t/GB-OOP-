@@ -3,13 +3,11 @@ package ru.gb.educ_stream.group;
 import java.util.Iterator;
 import java.util.List;
 
-import ru.gb.educ_stream.student.Student;
-
-public class StudentIterator implements Iterator<Student>{
+public class StudentIterator<T extends GroupItem<T>> implements Iterator<T>{
     private int index;
-    private List<Student> list;
+    private List<T> list;
 
-    public StudentIterator(List<Student> list) {
+    public StudentIterator(List<T> list) {
         this.list = list;
     }
     @Override
@@ -18,7 +16,7 @@ public class StudentIterator implements Iterator<Student>{
     }
 
     @Override
-    public Student next() {
+    public T next() {
         return list.get(index++);
     }
 
