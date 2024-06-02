@@ -7,7 +7,7 @@ import java.util.List;
 
 import ru.gb.educ_stream.student.Student;
 import ru.gb.educ_stream.student.comparators.StudentComparator;
-
+  
 public class Group implements Iterable<Student>{
     public List<Student> students;
     public Group() {
