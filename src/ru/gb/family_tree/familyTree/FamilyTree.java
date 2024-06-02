@@ -37,11 +37,11 @@ public class FamilyTree implements Serializable, Iterable<Human> {
             sb.append(human.toString() + "\n");
         return sb.toString();
     }
-    public void WriteTo(String path){
-        new FamilyTreeSerializer().Write(path, this);
+    public void writeTo(String path){
+        new FamilyTreeSerializer().write(path, this);
     }
-    public void ReadFrom(String path){
-        tree = new FamilyTreeSerializer().Read(path).tree;
+    public void readFrom(String path){
+        tree = new FamilyTreeSerializer().read(path).tree;
     }
     @Override
     public Iterator<Human> iterator() {

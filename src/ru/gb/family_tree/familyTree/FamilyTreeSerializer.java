@@ -6,7 +6,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 public class FamilyTreeSerializer {
-    public void Write(String path, FamilyTree obj){
+    public void write(String path, FamilyTree obj){
         try {
             var outputStream = new ObjectOutputStream(new FileOutputStream(path));
             outputStream.writeObject(obj);
@@ -16,7 +16,7 @@ public class FamilyTreeSerializer {
             System.out.println("File not exist or wrong path!");
         }
     }
-    public FamilyTree Read(String path){
+    public FamilyTree read(String path){
         try{
             var inputStream = new ObjectInputStream(new FileInputStream(path));
             FamilyTree ft = (FamilyTree)inputStream.readObject();
