@@ -5,10 +5,10 @@ import familyTree.FamilyTree;
 import human.Human;
 
 public class Service {
-    private FamilyTree tree;
+    private FamilyTree<Human> tree;
     private HumanBuilder humanBuilder;
     public Service() {
-        tree = new FamilyTree();
+        tree = new FamilyTree<>();
         humanBuilder = new HumanBuilder();
     }
     public void addHuman(String name){

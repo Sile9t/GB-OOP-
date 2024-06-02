@@ -4,28 +4,27 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 
-import human.Human;
-import human.comparators.HumanNameComparator;
+import human.comparators.NameComparator;
 
-public class FamilyTree implements Serializable, Iterable<Human> {
-    private ArrayList<Human> tree;
+public class FamilyTree<T extends FamilyTreeItem<T>> implements Serializable, Iterable<T> {
+    private ArrayList<T> tree;
     public FamilyTree() {
-        this(new ArrayList<Human>());
+        tree = new ArrayList<T>();
     }
-    public FamilyTree(ArrayList<Human> tree) {
+    public FamilyTree(ArrayList<T> tree) {
         this.tree = tree;
     }
-    public ArrayList<Human> tree(){
+    public ArrayList<T> tree(){
         return tree;
     }
-    public Boolean add(Human numan){
-        if (tree.contains(numan)) return false;
-        return tree.add(numan);
+    public Boolean add(T el){
+        if (tree.contains(el)) return false;
+        return tree.add(el);
     }
-    public Human remove(int index){
+    public T remove(int index){
         return tree.remove(index);
     }
-    public Human getFirst(){
+    public T getFirst(){
         return tree.getFirst();
     }
     @Override
@@ -33,24 +32,24 @@ public class FamilyTree implements Serializable, Iterable<Human> {
         StringBuilder sb = new StringBuilder();
         sb.append("FamilyTree:\n");
         if (tree == null) sb.append("Empty\n");
-        for(var human : tree)
-            sb.append(human.toString() + "\n");
+        for(var el : tree)
+            sb.append(el.toString() + "\n");
         return sb.toString();
     }
     public void writeTo(String path){
-        new FamilyTreeSerializer().write(path, this);
+        new FamilyTreeSerializer<T>().write(path, this);
     }
     public void ReadFrom(String path){
-        tree = new FamilyTreeSerializer().read(path).tree;
+        tree = new FamilyTreeSerializer<T>().read(path).tree;
     }
     @Override
-    public Iterator<Human> iterator() {
-        return new HumanIterator(tree);
+    public Iterator<T> iterator() {
+        return new HumanIterator<T>(tree);
     }
     public void sort() {
         Collections.sort(tree);
     }
     public void sortByName(){
-        tree.sort(new HumanNameComparator());
+        tree.sort(new NameComparator<T>());
     }
 }
