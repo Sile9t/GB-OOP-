@@ -40,7 +40,7 @@ public class FamilyTree implements Serializable, Iterable<Human> {
     public void writeTo(String path){
         new FamilyTreeSerializer().write(path, this);
     }
-    public void readFrom(String path){
+    public void ReadFrom(String path){
         tree = new FamilyTreeSerializer().read(path).tree;
     }
     @Override
