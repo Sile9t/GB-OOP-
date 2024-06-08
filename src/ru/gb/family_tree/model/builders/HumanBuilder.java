@@ -1,8 +1,8 @@
-package builders;
+package model.builders;
 
 import java.time.LocalDate;
 
-import human.Human;
+import model.human.Human;
 
 public class HumanBuilder {
     private int genId;

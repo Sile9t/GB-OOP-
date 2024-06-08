@@ -1,8 +1,8 @@
-package services;
+package model.services;
 
-import builders.HumanBuilder;
-import familyTree.FamilyTree;
-import human.Human;
+import model.builders.HumanBuilder;
+import model.familyTree.FamilyTree;
+import model.human.Human;
 
 public class Service {
     private FamilyTree<Human> tree;

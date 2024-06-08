@@ -1,10 +1,10 @@
-package familyTree;
+package model.familyTree;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 
-import human.comparators.NameComparator;
+import model.human.comparators.NameComparator;
 
 public class FamilyTree<T extends FamilyTreeItem<T>> implements Serializable, Iterable<T> {
     private ArrayList<T> tree;
