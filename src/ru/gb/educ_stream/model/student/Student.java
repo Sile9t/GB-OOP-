@@ -1,6 +1,6 @@
-package ru.gb.educ_stream.student;
+package ru.gb.educ_stream.model.student;
 
-import ru.gb.educ_stream.group.GroupItem;
+import ru.gb.educ_stream.model.group.GroupItem;
 
 public class Student implements GroupItem<Student>{
     public long id;

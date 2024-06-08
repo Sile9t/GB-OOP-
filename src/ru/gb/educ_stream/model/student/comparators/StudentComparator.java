@@ -1,8 +1,8 @@
-package ru.gb.educ_stream.student.comparators;
+package ru.gb.educ_stream.model.student.comparators;
 
 import java.util.Comparator;
 
-import ru.gb.educ_stream.group.GroupItem;
+import ru.gb.educ_stream.model.group.GroupItem;
 
 public class StudentComparator<T extends GroupItem<T>> implements Comparator<T>{
 

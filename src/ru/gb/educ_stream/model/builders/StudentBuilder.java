@@ -1,6 +1,6 @@
-package ru.gb.educ_stream.builders;
+package ru.gb.educ_stream.model.builders;
 
-import ru.gb.educ_stream.student.Student;
+import ru.gb.educ_stream.model.student.Student;
 
 public class StudentBuilder {
     private long genId;

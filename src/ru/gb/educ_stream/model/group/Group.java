@@ -1,11 +1,11 @@
-package ru.gb.educ_stream.group;
+package ru.gb.educ_stream.model.group;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-import ru.gb.educ_stream.student.comparators.StudentComparator;
+import ru.gb.educ_stream.model.student.comparators.StudentComparator;
   
 public class Group<T extends GroupItem<T>> implements Iterable<T>{
     public List<T> students;

@@ -1,4 +1,4 @@
-package ru.gb.educ_stream.group;
+package ru.gb.educ_stream.model.group;
 
 import java.util.Iterator;
 import java.util.List;
