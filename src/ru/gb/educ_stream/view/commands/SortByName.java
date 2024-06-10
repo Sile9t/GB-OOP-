@@ -8,6 +8,6 @@ public class SortByName extends Command {
         super(view, "Sort by name");
     }
     void execute(){
-        getConsoleView().getStudentsListInfo();
+        getConsoleView().sortByName();
     }    
 }

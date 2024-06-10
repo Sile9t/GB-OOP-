@@ -8,6 +8,6 @@ public class SortByAge extends Command {
         super(view, "Sort by age");
     }
     void execute(){
-        getConsoleView().getStudentsListInfo();
+        getConsoleView().sortByAge();
     }    
 }
