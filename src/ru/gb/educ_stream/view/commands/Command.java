@@ -12,5 +12,8 @@ public abstract class Command {
     public String getDescription(){
         return description;
     }
+    ConsoleView getConsoleView(){
+        return view;
+    }
     abstract void execute();
 }

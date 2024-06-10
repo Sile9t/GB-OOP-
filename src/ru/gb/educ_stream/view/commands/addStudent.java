@@ -2,16 +2,13 @@ package ru.gb.educ_stream.view.commands;
 
 import ru.gb.educ_stream.view.ConsoleView;
 
-public class AddStudent {
-    private ConsoleView view;
-    private String description;
+public class AddStudent extends Command{
+
     public AddStudent(ConsoleView view) {
-        this.view = view; 
+        super(view, "Add student");
     }
-    public void execute(){
-        view.addStudent();
-    }
-    public String getDescription(){
-        return description;
+    @Override
+    void execute(){
+
     }
 }
