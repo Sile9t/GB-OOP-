@@ -47,7 +47,7 @@ public class ConsoleView implements View {
             }
         }
     }
-    private void finish() {
+    public void finish() {
         System.out.println("Console finished");
         work = false;
     }
