@@ -29,6 +29,7 @@ public class ConsoleView implements View {
                     addStudent();
                     break;
                 case "2":
+                getStudentsListInfo();
                     break;
                 case "3":
                     break;
@@ -41,6 +42,9 @@ public class ConsoleView implements View {
                     break;
             }
         }
+    }
+    private void getStudentsListInfo() {
+        presenter.getStudentsListInfo();
     }
     private void addStudent() {
         System.out.println("Enter student name");

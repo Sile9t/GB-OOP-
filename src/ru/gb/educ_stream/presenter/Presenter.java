@@ -14,4 +14,8 @@ public class Presenter {
         service.addStudent(name, age);
         //add action result return
     }
+    public void getStudentsListInfo() {
+        String answer = service.getStudentListInfo();
+        view.printAnswer(answer);
+    }
 }
