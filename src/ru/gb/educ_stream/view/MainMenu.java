@@ -27,7 +27,7 @@ public class MainMenu {
     }
 
     public void execute(int choice){
-        Command command = commands.get(choice);
+        Command command = commands.get(choice-1);
         command.execute();
     }
 }

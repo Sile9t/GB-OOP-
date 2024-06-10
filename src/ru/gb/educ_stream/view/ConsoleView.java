@@ -7,44 +7,24 @@ import ru.gb.educ_stream.presenter.Presenter;
 public class ConsoleView implements View {
     private Scanner scanner;
     private Presenter presenter;
-    private boolean work = true;
+    private boolean work;
+    private MainMenu menu;
     
     public ConsoleView() {
         scanner = new Scanner(System.in);
         presenter = new Presenter(this);
+        work = true;
+        menu = new MainMenu(this);
     }
     @Override
     public void start() {
         System.out.println("Console is running");
         while(work){
-            System.out.println("Choose command:");
-            System.out.println("1 - Add student");
-            System.out.println("2 - Get students list");
-            System.out.println("3 - Sort list by name");
-            System.out.println("4 - Sort by age");
-            System.out.println("5 - Exit");
-
-            String choice = scanner.nextLine();
-            switch(choice){
-                case "1":
-                    addStudent();
-                    break;
-                case "2":
-                    getStudentsListInfo();
-                    break;
-                case "3":
-                    sortByName();
-                    break;
-                case "4":
-                    sortByAge();
-                    break;
-                case "5":
-                    finish();
-                    break;
-                default:
-                    System.out.println("Wrong input! Try again.");
-                    break;
-            }
+           System.out.println(menu.menu());
+           String choise = scanner.nextLine();
+           //input validation
+           int choice = Integer.parseInt(choise);
+           menu.execute(choice);
         }
     }
     public void finish() {
