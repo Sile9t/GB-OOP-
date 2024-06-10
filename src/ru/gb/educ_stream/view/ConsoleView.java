@@ -51,16 +51,16 @@ public class ConsoleView implements View {
         System.out.println("Console finished");
         work = false;
     }
-    private void sortByAge() {
+    public void sortByAge() {
         presenter.sortByAge();
     }
-    private void sortByName() {
+    public void sortByName() {
         presenter.sortByName();
     }
-    private void getStudentsListInfo() {
+    public void getStudentsListInfo() {
         presenter.getStudentsListInfo();
     }
-    private void addStudent() {
+    public void addStudent() {
         System.out.println("Enter student name");
         String name = scanner.nextLine();
         System.out.println("Enter student age");
