@@ -7,6 +7,7 @@ import ru.gb.educ_stream.presenter.Presenter;
 public class ConsoleView implements View {
     private Scanner scanner;
     private Presenter presenter;
+    private boolean work = true;
     
     public ConsoleView() {
         scanner = new Scanner(System.in);
@@ -15,7 +16,7 @@ public class ConsoleView implements View {
     @Override
     public void start() {
         System.out.println("Console is running");
-        while(true){
+        while(work){
             System.out.println("Choose command:");
             System.out.println("1 - Add student");
             System.out.println("2 - Get students list");
@@ -38,12 +39,17 @@ public class ConsoleView implements View {
                     sortByAge();
                     break;
                 case "5":
+                    finish();
                     break;
                 default:
                     System.out.println("Wrong input! Try again.");
                     break;
             }
         }
+    }
+    private void finish() {
+        System.out.println("Console finished");
+        work = false;
     }
     private void sortByAge() {
         presenter.sortByAge();
