@@ -9,6 +9,6 @@ public class AddStudent extends Command{
     }
     @Override
     void execute(){
-
+        getConsoleView().addStudent();
     }
 }
