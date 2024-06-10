@@ -35,6 +35,7 @@ public class ConsoleView implements View {
                     sortByName();
                     break;
                 case "4":
+                    sortByAge();
                     break;
                 case "5":
                     break;
@@ -43,6 +44,9 @@ public class ConsoleView implements View {
                     break;
             }
         }
+    }
+    private void sortByAge() {
+        presenter.sortByAge();
     }
     private void sortByName() {
         presenter.sortByName();

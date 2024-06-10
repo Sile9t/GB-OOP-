@@ -22,4 +22,8 @@ public class Presenter {
         service.sortByName();
         getStudentsListInfo();
     }
+    public void sortByAge() {
+        service.sortByAge();
+        getStudentsListInfo();
+    }
 }
