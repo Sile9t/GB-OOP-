@@ -1,6 +1,5 @@
 package ru.gb.educ_stream;
 
-import ru.gb.educ_stream.model.services.Service;
 import ru.gb.educ_stream.view.ConsoleView;
 import ru.gb.educ_stream.view.View;
 

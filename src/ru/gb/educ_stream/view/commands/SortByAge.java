@@ -7,7 +7,8 @@ public class SortByAge extends Command {
     public SortByAge(ConsoleView view) {
         super(view, "Sort by age");
     }
-    void execute(){
+    @Override
+    public void execute(){
         getConsoleView().sortByAge();
     }    
 }

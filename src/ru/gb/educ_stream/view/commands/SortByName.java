@@ -7,7 +7,8 @@ public class SortByName extends Command {
     public SortByName(ConsoleView view) {
         super(view, "Sort by name");
     }
-    void execute(){
+    @Override
+    public void execute(){
         getConsoleView().sortByName();
     }    
 }

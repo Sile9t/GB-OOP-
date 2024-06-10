@@ -7,7 +7,8 @@ public class GetStudentsListInfo extends Command {
     public GetStudentsListInfo(ConsoleView view) {
         super(view, "Get students list");
     }
-    void execute(){
+    @Override
+    public void execute(){
         getConsoleView().getStudentsListInfo();
     }    
 }
