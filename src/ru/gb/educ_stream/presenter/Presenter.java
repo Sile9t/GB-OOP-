@@ -10,4 +10,8 @@ public class Presenter {
         this.view = view;
         service = new Service();
     }
+    public void addStudent(String name, int age) {
+        service.addStudent(name, age);
+        //add action result return
+    }
 }
