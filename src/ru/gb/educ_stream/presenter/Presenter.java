@@ -12,10 +12,14 @@ public class Presenter {
     }
     public void addStudent(String name, int age) {
         service.addStudent(name, age);
-        //add action result return
+        getStudentsListInfo();
     }
     public void getStudentsListInfo() {
         String answer = service.getStudentListInfo();
         view.printAnswer(answer);
+    }
+    public void sortByName() {
+        service.sortByName();
+        getStudentsListInfo();
     }
 }

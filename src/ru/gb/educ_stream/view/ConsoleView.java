@@ -29,9 +29,10 @@ public class ConsoleView implements View {
                     addStudent();
                     break;
                 case "2":
-                getStudentsListInfo();
+                    getStudentsListInfo();
                     break;
                 case "3":
+                    sortByName();
                     break;
                 case "4":
                     break;
@@ -42,6 +43,9 @@ public class ConsoleView implements View {
                     break;
             }
         }
+    }
+    private void sortByName() {
+        presenter.sortByName();
     }
     private void getStudentsListInfo() {
         presenter.getStudentsListInfo();
