@@ -22,10 +22,17 @@ public class ConsoleView implements View {
         while(work){
            System.out.println(menu.menu());
            String choise = scanner.nextLine();
-           //input validation
+           if (!checkInput(choise)) continue;
            int choice = Integer.parseInt(choise);
            menu.execute(choice);
         }
+    }
+    public boolean checkInput(String choiseStr){
+        if (choiseStr.matches("[0-9]*")) {
+            int choise = Integer.parseInt(choiseStr);
+            return (choise > 0 && choise <= menu.size());
+        }
+        return false;
     }
     public void finish() {
         System.out.println("Console finished");
