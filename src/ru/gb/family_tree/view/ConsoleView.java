@@ -23,7 +23,7 @@ public class ConsoleView implements View {
             System.out.println("1. Add human");
             System.out.println("2. Get family tree");
             System.out.println("3. Sort tree by name");
-            System.out.println("4. Sort tree by age");
+            System.out.println("4. Sort tree by birth date");
             System.out.println("5. Exit");
 
             String choice = scanner.nextLine();
@@ -33,10 +33,13 @@ public class ConsoleView implements View {
                     addHuman();
                     break;
                 case "2":
+                    getFamilyTree();
                     break;
                 case "3":
+                    sortByName();
                     break;
                 case "4":
+                    sortByBirthDate();
                     break;
                 case "5":
                     finish();
@@ -47,7 +50,16 @@ public class ConsoleView implements View {
         }
     }
 
-    private void finish() {
+    public void sortByBirthDate() {
+        presenter.sortByBirthDate();
+    }
+    public void sortByName() {
+        presenter.sortByName();
+    }
+    public void getFamilyTree() {
+        presenter.getFamilyTree();
+    }
+    public void finish() {
         System.out.println("Console is finished");
         work = false;
     }
