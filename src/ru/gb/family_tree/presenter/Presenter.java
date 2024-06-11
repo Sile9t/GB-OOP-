@@ -15,10 +15,12 @@ public class Presenter {
 
     public void addHuman(String name) {
         service.addHuman(name);
+        getFamilyTree();
     }
 
     public void addHuman(String name, Human mother, Human father){
         service.addHuman(name, mother, father);
+        getFamilyTree();
     }
 
     public Human getHuman(int id) {

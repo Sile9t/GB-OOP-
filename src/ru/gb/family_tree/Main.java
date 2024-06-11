@@ -1,19 +1,8 @@
-import model.services.Service;
+import view.*;
 
 public class Main {
     public static void main(String[] args) {
-        Service service = new Service();
-
-        service.addHuman("Henry");
-        service.addHuman("Anna");
-        service.addHuman("Etan");
-        service.addHuman("Merry");
-
-        System.out.println(service.getFamilyTree());
-        service.sortByBirthDate();
-        System.out.println(service.getFamilyTree());
-        service.sortByName();
-        System.out.println(service.getFamilyTree());
-
+        View view = new ConsoleView();
+        view.start();
     }
 }

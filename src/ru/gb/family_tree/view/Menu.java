@@ -17,9 +17,9 @@ public class Menu {
     }
     public String menu(){
         StringBuilder sb = new StringBuilder();
-        sb.append("Commands list:");
+        sb.append("Commands list:\n");
         for (int i = 0; i < commands.size(); i++) {
-            sb.append(i + " " + commands.get(i).getDescription() + "\n");
+            sb.append((i + 1) + " " + commands.get(i).getDescription() + "\n");
         }
         return sb.toString();
     }
