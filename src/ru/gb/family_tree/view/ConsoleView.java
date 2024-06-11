@@ -9,47 +9,33 @@ public class ConsoleView implements View {
     private Scanner scanner;
     private Presenter presenter;
     private boolean work;
+    private Menu menu;
     
     public ConsoleView() {
         scanner = new Scanner(System.in);
         presenter = new Presenter(this);
         work = true;
+        menu = new Menu(this);
     }
     @Override
     public void start() {
         System.out.println("Console is working...");
         while(work){
-            System.out.println("Choose command:");
-            System.out.println("1. Add human");
-            System.out.println("2. Get family tree");
-            System.out.println("3. Sort tree by name");
-            System.out.println("4. Sort tree by birth date");
-            System.out.println("5. Exit");
-
-            String choice = scanner.nextLine();
-
-            switch (choice){
-                case "1":
-                    addHuman();
-                    break;
-                case "2":
-                    getFamilyTree();
-                    break;
-                case "3":
-                    sortByName();
-                    break;
-                case "4":
-                    sortByBirthDate();
-                    break;
-                case "5":
-                    finish();
-                    break;
-                default:
-                    System.out.println("Wrong input. Try again.");
-            }
+            System.out.println(menu.menu());
+            String choiseStr = scanner.nextLine();
+            if (!checkInput(choiseStr)) continue;
+            int choise = Integer.parseInt(choiseStr);
+            menu.execute(choise);
         }
     }
-
+        
+    private boolean checkInput(String choiseStr) {
+        if (choiseStr.matches("[0-9]")){
+            int choise = Integer.parseInt(choiseStr);
+            return (choise > 0 && choise <= menu.size());
+        }
+        return false;
+    }
     public void sortByBirthDate() {
         presenter.sortByBirthDate();
     }
