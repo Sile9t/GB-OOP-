@@ -18,7 +18,7 @@ public class ConsoleView implements View {
     @Override
     public void start() {
         System.out.println("Console is working...");
-        while(true){
+        while(work){
             System.out.println("Choose command:");
             System.out.println("1. Add human");
             System.out.println("2. Get family tree");
@@ -39,6 +39,7 @@ public class ConsoleView implements View {
                 case "4":
                     break;
                 case "5":
+                    finish();
                     break;
                 default:
                     System.out.println("Wrong input. Try again.");
@@ -46,6 +47,10 @@ public class ConsoleView implements View {
         }
     }
 
+    private void finish() {
+        System.out.println("Console is finished");
+        work = false;
+    }
     public void addHuman() {
         System.out.println("Enter human name");
         String name = scanner.nextLine();
