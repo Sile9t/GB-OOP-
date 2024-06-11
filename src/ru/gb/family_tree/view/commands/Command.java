@@ -9,7 +9,7 @@ public abstract class Command {
         this.view = view;
         this.description = description;
     }
-    String getDescription(){
+    public String getDescription(){
         return description;
     }
     ConsoleView getConsoleView(){
