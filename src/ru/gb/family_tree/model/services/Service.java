@@ -15,6 +15,10 @@ public class Service {
         var human = humanBuilder.build(name);
         tree.add(human);
     }
+    public void addHuman(String name, Human mother, Human father){
+        var human = humanBuilder.build(name, mother, father);
+        tree.add(human);
+    }
     public String getFamilyTree(){
         StringBuilder sb = new StringBuilder();
         sb.append("Family tree:\n");
@@ -27,5 +31,8 @@ public class Service {
     }
     public void sortByName(){
         tree.sortByName();
+    }
+    public Human getHuman(int id) {
+        return tree.get(id);
     }
 }

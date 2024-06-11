@@ -52,4 +52,7 @@ public class FamilyTree<T extends FamilyTreeItem<T>> implements Serializable, It
     public void sortByName(){
         tree.sort(new NameComparator<T>());
     }
+    public T get(int id) {
+        return tree.get(id);
+    }
 }
