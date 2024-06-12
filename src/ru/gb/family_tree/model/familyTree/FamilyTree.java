@@ -36,12 +36,6 @@ public class FamilyTree<T extends FamilyTreeItem<T>> implements Serializable, It
             sb.append(el.toString() + "\n");
         return sb.toString();
     }
-    public void writeTo(String path){
-        new FamilyTreeSerializer<T>().write(path, this);
-    }
-    public void ReadFrom(String path){
-        tree = new FamilyTreeSerializer<T>().read(path).tree;
-    }
     @Override
     public Iterator<T> iterator() {
         return new HumanIterator<T>(tree);

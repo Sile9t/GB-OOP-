@@ -81,18 +81,18 @@ public class Human implements FamilyTreeItem<Human>{
          gender, birthDate, mother != null? mother.name : "none", 
          father != null? father.name : "none");
     }
-    public String FamilyTree(){
-        return FamilyTree(0);
-    }
-    public String FamilyTree(int tabsCount){
-        StringBuilder sb = new StringBuilder();
-        sb.append(this.toString() + "\n");
-        String tabs = "\t".repeat(tabsCount);
-        tabsCount++;
-        for(var child : children)
-            sb.append(tabs + child.FamilyTree(tabsCount));
-        return sb.toString();
-    }
+    // public String FamilyTree(){
+    //     return FamilyTree(0);
+    // }
+    // public String FamilyTree(int tabsCount){
+    //     StringBuilder sb = new StringBuilder();
+    //     sb.append(this.toString() + "\n");
+    //     String tabs = "\t".repeat(tabsCount);
+    //     tabsCount++;
+    //     for(var child : children)
+    //         sb.append(tabs + child.FamilyTree(tabsCount));
+    //     return sb.toString();
+    // }
     @Override
     public int compareTo(Human o) {
         return birthDate.compareTo(o.getBirthDate());

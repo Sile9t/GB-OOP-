@@ -60,7 +60,8 @@ public class ConsoleView implements View {
         String addParentsAns = scanner.nextLine();
         if (addParentsAns.equalsIgnoreCase("y")){
             getFamilyTree();
-            presenter.addHuman(name, getParent(Gender.Female), getParent(Gender.Male));
+            presenter.addHuman(name, getParent(Gender.Female), 
+                getParent(Gender.Male));
             return;
         }
         presenter.addHuman(name);
