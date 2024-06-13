@@ -38,7 +38,7 @@ public class FamilyTree<T extends FamilyTreeItem<T>> implements Serializable, It
     }
     @Override
     public Iterator<T> iterator() {
-        return new HumanIterator<T>(tree);
+        return new FamilyTreeIterator<T>(tree);
     }
     public void sort() {
         Collections.sort(tree);

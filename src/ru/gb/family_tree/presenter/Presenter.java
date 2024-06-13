@@ -1,5 +1,6 @@
 package presenter;
 
+import model.familyTree.FamilyTreeItem;
 import model.human.Human;
 import model.services.Service;
 import view.View;
@@ -13,17 +14,17 @@ public class Presenter {
         this.service = new Service();
     }
 
-    public void addHuman(String name) {
+    public void addTreeItem(String name) {
         service.addHuman(name);
         getFamilyTree();
     }
 
-    public void addHuman(String name, Human mother, Human father){
-        service.addHuman(name, mother, father);
+    public void addTreeItem(String name, int motherId, int fatherId){
+        service.addHuman(name, motherId, fatherId);
         getFamilyTree();
     }
 
-    public Human getHuman(int id) {
+    public FamilyTreeItem<Human> getTreeItem(int id) {
         return service.getHuman(id);
     }
 

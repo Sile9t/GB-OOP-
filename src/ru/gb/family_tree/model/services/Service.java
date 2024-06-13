@@ -15,8 +15,8 @@ public class Service {
         var human = humanBuilder.build(name);
         tree.add(human);
     }
-    public void addHuman(String name, Human mother, Human father){
-        var human = humanBuilder.build(name, mother, father);
+    public void addHuman(String name, int motherId, int fatherId){
+        var human = humanBuilder.build(name, getHuman(motherId), getHuman(fatherId));
         tree.add(human);
     }
     public String getFamilyTree(){

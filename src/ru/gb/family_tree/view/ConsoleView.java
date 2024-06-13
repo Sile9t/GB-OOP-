@@ -2,8 +2,6 @@ package view;
 
 import java.util.Scanner;
 
-import model.human.Gender;
-import model.human.Human;
 import presenter.Presenter;
 
 public class ConsoleView implements View {
@@ -53,35 +51,30 @@ public class ConsoleView implements View {
         System.out.println("Console is finished");
         work = false;
     }
-    public void addHuman() {
+    public void addTreeItem() {
         System.out.println("Enter human name");
         String name = scanner.nextLine();
         System.out.println("Add parents ('y'/'n')?");
         String addParentsAns = scanner.nextLine();
         if (addParentsAns.equalsIgnoreCase("y")){
             getFamilyTree();
-            presenter.addHuman(name, getParent(Gender.Female), 
-                getParent(Gender.Male));
+            presenter.addTreeItem(name, getParent(), getParent());
             return;
         }
-        presenter.addHuman(name);
+        presenter.addTreeItem(name);
     }
-    private Human getParent(Gender gender){
-        System.out.println("Enter " + gender + " parent id");
+    private int getParent(){
+        System.out.println("Enter parent id");
         String idStr = scanner.nextLine();
-        Human human;
+        int id;
         while(true){
             if (isDigit(idStr)){
-                int id = Integer.parseInt(idStr);
-                human = getHuman(id);
-                if (human.getGender() == gender) break;
+                id = Integer.parseInt(idStr);
+                break;
             }
             System.out.println("Wrong input! Try again.");
         }
-        return human;
-    }
-    public Human getHuman(int id){
-        return presenter.getHuman(id);
+        return id;
     }
     @Override
     public void printAnswer(String answer) {

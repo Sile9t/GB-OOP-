@@ -9,7 +9,7 @@ public class Menu {
     List<Command> commands;
     public Menu(ConsoleView view) {
         commands = new ArrayList<>();
-        commands.add(new AddHuman(view));
+        commands.add(new AddTreeItem(view));
         commands.add(new GetFamilyTree(view));
         commands.add(new SortByName(view));
         commands.add(new SortByBirthDate(view));

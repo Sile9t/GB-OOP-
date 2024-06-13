@@ -3,10 +3,10 @@ package model.familyTree;
 import java.util.Iterator;
 import java.util.List;
 
-public class HumanIterator<T extends FamilyTreeItem<T>> implements Iterator<T>{
+public class FamilyTreeIterator<T extends FamilyTreeItem<T>> implements Iterator<T>{
     private int index;
     private List<T> tree;
-    public HumanIterator(List<T> list) {
+    public FamilyTreeIterator(List<T> list) {
         tree = list;
     }
     @Override
