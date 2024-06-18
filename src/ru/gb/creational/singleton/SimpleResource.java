@@ -9,4 +9,6 @@ public class SimpleResource {
         
         return simpleResource;
     }
+
+    private SimpleResource(){}
 }
