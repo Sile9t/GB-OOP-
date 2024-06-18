@@ -3,15 +3,15 @@ package ru.gb.creational.builder;
 public abstract class BusinessCardBuilder {
     private BusinessCard card;
 
-    public abstract void createName();
-    public abstract void createPrise();
-    public abstract void createSize();
+    protected abstract void createName();
+    protected abstract void createPrise();
+    protected abstract void createSize();
 
-    public void createCard(){
+    private void createCard(){
         card = new BusinessCard();
     }
 
-    public BusinessCard getCard(){
+    protected BusinessCard getCard(){
         return card;
     }
 
