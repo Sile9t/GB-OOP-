@@ -11,6 +11,10 @@ public abstract class BusinessCardBuilder {
         card = new BusinessCard();
     }
 
+    public BusinessCard getCard(){
+        return card;
+    }
+
     public BusinessCard build(){
         createCard();
         createName();
